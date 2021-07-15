@@ -30,6 +30,14 @@ def Site() :
                 nameSite.append(site)
                 if "http" or "https" in site :
                     print(requests.get(site))
+                #    requestsChecker = requests.get(site)
+                #    if "[200]" in requestsChecker :
+                #        print("ture")
+                #        print(requestsChecker)
+                #    else :
+                #        print("false")
+                #        print(requestsChecker)
+
                         
                 else :
                     print("The Url IS Invlid")
@@ -47,15 +55,16 @@ def Site() :
             
         
             for tld in Tld :
-                if tld in Target :
+    
+                if "." in Target :
                     info = socket.gethostbyname_ex(Target)
                     for infor in info :
                         if (infor == []) :
                             quit
                         else :
                             print(infor)
-                    break
-                
+                    exit()
+                    
                 else :
                     Tldd = str(input("Enter TLD Site ==>> "))
                     Target = str(input("Enter Name site ==>> "))
