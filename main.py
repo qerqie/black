@@ -57,9 +57,6 @@ def Site() :
                     break
                 
                 else :
-                    # for x in Tld :
-                    #     print(x)
-                    #     print("\n")
                     Tldd = str(input("Enter TLD Site ==>> "))
                     Target = str(input("Enter Name site ==>> "))
                     Last_Target = Target + "." + Tldd
